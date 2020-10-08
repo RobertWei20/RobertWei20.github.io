@@ -8,12 +8,6 @@
 
                 <p class="copyright text-muted">
                     Copyright &copy; {{ site.title }} {{ site.time | date: '%Y' }}
-                    <br>
-                    Powered by <a href="http://huangxuan.me">Hux Blog</a> |
-                    <iframe style="margin-left: 2px; margin-bottom:-5px;" frameborder="0" scrolling="0" width="100px"
-                        height="20px"
-                        src="https://ghbtns.com/github-btn.html?user=huxpro&repo=huxpro.github.io&type=star&count=true">
-                    </iframe>
                 </p>
             </div>
         </div>
@@ -159,7 +153,7 @@
 <script type="text/javascript">
     function generateCatalog(selector) {
 
-        // interop with multilangual 
+        // interop with multilangual
         if ('{{ page.multilingual }}' == 'true') {
             _containerSelector = 'div.post-container.active'
         } else {
@@ -252,7 +246,7 @@
             $en.style.display = "none";
             $en.classList.remove("active");
         }
-        // interop with catalog 
+        // interop with catalog
         generateCatalog(".catalog-body");
     }
 
@@ -289,7 +283,7 @@
         noResultsText: 'No results',
         limit: 50,
         fuzzy: false,
-        // a hack to get escaped subtitle unescaped. for some reason, 
+        // a hack to get escaped subtitle unescaped. for some reason,
         // post.subtitle w/o escape filter nuke entire search.
         templateMiddleware: function (prop, value, template) {
             if (prop === 'subtitle' || prop === 'title') {
@@ -321,7 +315,7 @@
                 $searchClose.on('click', function (e) {
                     e.preventDefault();
                     $searchPage.removeClass('search-active');
-                    $body.attr('class', prevClasses);  // from closure 
+                    $body.attr('class', prevClasses);  // from closure
                 });
                 $searchInput.focus();
             }
